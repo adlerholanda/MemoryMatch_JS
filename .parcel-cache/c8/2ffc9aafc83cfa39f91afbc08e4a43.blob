@@ -1,0 +1,14 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _phaser = require('phaser');
+var _phaserDefault = _parcelHelpers.interopDefault(_phaser);
+class Game extends _phaserDefault.default.Scene {
+  constructor() {
+    super('game');
+  }
+  create() {
+    const {width, height} = this.scale;
+    this.add.sprite(width * 0.5, height * 0.5, 'sokoban', 1);
+  }
+}
+exports.default = Game;
